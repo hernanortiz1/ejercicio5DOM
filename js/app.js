@@ -35,3 +35,19 @@ btns[1].addEventListener("click", () => {
     corriendo = true;
   }
 });
+
+// PAUSA
+btns[0].addEventListener("click", () => {
+   clearInterval(intervalo);
+  corriendo = false;
+});
+
+// RESET
+btns[2].addEventListener("click", () => {
+  clearInterval(intervalo);
+  segundos = 0;
+  minutos = 0;
+  horas = 0;
+  corriendo = false;
+  actualizarPantalla();
+});
