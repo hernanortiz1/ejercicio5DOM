@@ -28,3 +28,10 @@ const contarTiempo = () => {
   actualizarPantalla();
 };
 
+// BOTON INICIAR
+btns[1].addEventListener("click", () => {
+  if (!corriendo) {
+    intervalo = setInterval(contarTiempo, 1000);
+    corriendo = true;
+  }
+});
